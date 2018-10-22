@@ -4,8 +4,10 @@ def oxford_comma(array)
   when 2: array.first + " and " + array.last
   else:
     output = array.shift
-    while array.size > 2 do
+    while array.size > 1 do
       output += ", " + array.shift
     end
+    output += ", and " + array.shift
+    output
   end
 end
